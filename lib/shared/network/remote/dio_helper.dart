@@ -30,8 +30,6 @@ class DioHelper {
 
   static Future<Response> getData({
     required String path,
-    Map<String, dynamic>? query,
-    String lang = 'en',
     required String jwtToken,
   }) async {
     dio.options.headers = {
@@ -39,6 +37,19 @@ class DioHelper {
       'Authorization': 'Bearer $jwtToken',
     };
     return await dio.get(
+      path,
+    );
+  }
+
+  static Future<Response> deleteData({
+    required String path,
+    required String jwtToken,
+  }) async {
+    dio.options.headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer $jwtToken',
+    };
+    return await dio.delete(
       path,
     );
   }

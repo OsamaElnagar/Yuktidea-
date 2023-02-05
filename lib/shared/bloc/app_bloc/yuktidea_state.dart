@@ -31,3 +31,32 @@ class YuktSendVerifyCodeErrorState extends YuktideaState {
 
   YuktSendVerifyCodeErrorState(this.error);
 }
+
+class YuktDelUserLoadingState extends YuktideaState {}
+
+class YuktDelUserSuccessState extends YuktideaState {
+  final OTPResendModel otpResendModel;
+
+  YuktDelUserSuccessState(this.otpResendModel);
+}
+
+class YuktDelUserErrorState extends YuktideaState {
+  final String error;
+
+  YuktDelUserErrorState(this.error);
+}
+
+
+class YuktGetUserLoadingState extends YuktideaState {}
+
+class YuktGetUserSuccessState extends YuktideaState {
+  final YuktUserModel yuktUserModel;
+
+  YuktGetUserSuccessState(this.yuktUserModel);
+}
+
+class YuktGetUserErrorState extends YuktideaState {
+  final String error;
+
+  YuktGetUserErrorState(this.error);
+}
