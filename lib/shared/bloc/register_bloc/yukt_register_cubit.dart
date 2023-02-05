@@ -11,7 +11,6 @@ import 'package:yuktidea_auth_flow/shared/network/remote/dio_helper.dart';
 import 'dart:async';
 import '../../components/strings.dart';
 import '../../network/end_points.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 
 part 'yukt_register_state.dart';
